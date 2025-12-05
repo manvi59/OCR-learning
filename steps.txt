@@ -1,0 +1,45 @@
+✅ STEP 1 — Install Tesseract OCR (Windows)
+
+Download from here:
+🔗 https://github.com/UB-Mannheim/tesseract/wiki
+
+Download the file named like:
+Tesseract-5.x.x.exe (UB Mannheim build)
+
+Install it.
+
+✅ STEP 2 — Find the Installation Path
+
+After installation, the path will be like:
+
+C:\Program Files\Tesseract-OCR\tesseract.exe
+
+
+or sometimes:
+
+C:\Program Files (x86)\Tesseract-OCR\tesseract.exe
+
+✅ STEP 3 — Tell Python Where Tesseract Is
+
+Add this to your Python code:
+
+import pytesseract
+
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
+
+⚠️ Replace the path with whatever your actual installation path is.
+
+
+//------------------------------------------pytesseract installation----------------------
+
+pip install pytesseract pillow
+
+
+
+//------------------------------------------------------Open Cv installation--------------
+
+To install cv2 (OpenCV) in Python, use pip:
+
+Standard Installation
+pip install opencv-python
