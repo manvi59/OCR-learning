@@ -1,0 +1,24 @@
+✅ METHOD 1 — Using pdf2image + Tesseract OCR (Most common way)
+Install required libraries
+pip install pdf2image pytesseract pillow
+
+
+You also need to install Poppler (this converts PDF → image):
+
+Download Windows poppler:
+https://github.com/oschwartz10612/poppler-windows/releases/
+
+Extract it and note the path, e.g.:
+
+C:\poppler-24.02.0\Library\bin
+
+
+//--------------------------------------------------how it's works-----------------
+
+convert_from_path()
+→ Converts each page of PDF into high-quality images
+
+pytesseract.image_to_string()
+→ OCR extracts text from each image
+
+full_text collects all pages’ text
